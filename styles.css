@@ -1,0 +1,139 @@
+/* General body styling */
+body {
+    background-color: black;
+    font-family: 'Times New Roman';
+    color: white;
+  }
+  
+  /* Styling for the h1 element */
+  h1 {
+    font-family: 'Roboto'; /* Changed font family to 'Roboto' */
+    font: 400; /* Set font weight */
+    color: white;
+    font-display: center;
+    margin-top: 50px; /* Adjusted margin-top for better spacing */
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-shadow: 0 0 10px greenyellow; /* Glowing effect on text */
+    font-size: 60px; /* Set font size */
+  }
+  
+  /* Styling for the h3 element */
+  h3 {
+    font-display: center;
+    text-shadow: 0 0 10px greenyellow;
+    margin-top: 2px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    font-size: 22px; /* Set font size for smaller heading */
+  }
+  h1:hover, h3:hover {
+    color: rgb(227, 76, 175); /* Changes color on hover */
+    text-shadow: 0 0 20px greenyellow, 0 0 30px pink; /* More glowing */
+    transform: scale(1.05); /* Slightly grow the text */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+  /* Main container to group the image and text together */
+  .main-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    align-items: center; /* Aligns content vertically */
+    height: 100vh; /* Full screen height */
+    padding-right: 50px; /* Space from the right edge */
+  }
+  
+  /* Container for the image */
+  .container img {
+    height: 300px; /* Increased height */
+    width: 300px; /* Increased width */
+    border-radius: 50%; /* Circular image */
+    margin-right: 20px; /* Space between image and text */
+    margin-left: 20px;
+    margin-top: 50px; /* Added top margin for spacing */
+    box-shadow: 0 0 5px 5px greenyellow, inset 0 0 10px 5px rgba(196, 255, 46, 0.8); /* Initial glowing effect with gradient */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  /* Hover effect for image (stronger glowing effect with gradient) */
+  .container img:hover {
+    box-shadow: 0 0 10px 10px greenyellow, inset 0 0 15px 10px rgba(255, 141, 224, 0.8); /* Stronger glow with gradient on hover */
+  }
+  /* Styling for the navigation menu (ul) */
+  ul {
+    list-style: none;
+    display: flex;
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Show the menu when the class 'show' is added */
+  ul.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Styling for individual menu items */
+  ul li {
+    position: relative;
+    margin-left: 20px; /* Space between menu items */
+  }
+  
+  /* Styling for anchor tags inside menu items */
+  ul li a {
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 24px; /* Icon size */
+    display: inline-block;
+    padding: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  /* Styling for text inside anchor tags */
+  ul li a span {
+    display: none; /* Hide text by default */
+    font-size: 14px;
+    margin-top: 5px;
+    color: white;
+    text-shadow: 0 0 10px greenyellow;
+  }
+  
+  /* Hover effect for anchor tags */
+  ul li a:hover {
+    color: rgb(227, 76, 175); /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+  }
+  
+  /* Show text when hovering over the icon */
+  ul li a:hover span {
+    display: block; /* Make the text appear */
+  }
+  
+  /* Adjust spacing between the icon and the text */
+  ul li a i {
+    font-size: 30px; /* Adjust icon size */
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for the menu toggle icon */
+  #menu-toggle {
+    font-size: 30px; /* Set size for the hamburger icon */
+    color: greenyellow; /* Initial color for the icon */
+    position: fixed; /* Position it fixed to the top left */
+    top: 20px;
+    left: 20px;
+    cursor: pointer; /* Cursor changes to pointer */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  /* Change color of the hamburger icon when hovered */
+  #menu-toggle:hover {
+    color: rgb(227, 76, 175); /* Change color on hover */
+  }
