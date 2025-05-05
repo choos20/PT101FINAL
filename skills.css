@@ -1,4 +1,3 @@
-/* 3D Background Effect */
 html::before {
   content: "";
   position: fixed;
@@ -44,7 +43,6 @@ body::after {
   }
 }
 
-/* Base styles */
 body {
   font-family: Arial, sans-serif;
   background-color: transparent;
@@ -53,7 +51,6 @@ body {
   padding: 0;
 }
 
-/* Skills Section */
 .skills-section {
   text-align: center;
   margin-top: 50px;
@@ -72,7 +69,6 @@ body {
   padding: 0 20px;
 }
 
-/* Individual Skill */
 .skill {
   margin-bottom: 30px;
   text-align: left;
@@ -114,7 +110,6 @@ body {
   border-radius: 10px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   .skills-section h2 {
     font-size: 28px;

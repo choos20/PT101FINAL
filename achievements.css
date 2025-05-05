@@ -1,4 +1,3 @@
-/* Base styles */
 body {
   font-family: Arial, sans-serif;
   background-color: transparent;
@@ -9,7 +8,6 @@ body {
   position: relative;
 }
 
-/* --- LAYER 1: DEEP STATIC BACKGROUND --- */
 html::before {
   content: "";
   position: fixed;
@@ -21,7 +19,6 @@ html::before {
   z-index: -3;
 }
 
-/* --- LAYER 2: FLOATING ART BACKGROUND (BLURRED) --- */
 body::before,
 body::after {
   content: "";
@@ -47,7 +44,6 @@ body::after {
   animation-delay: 2s;
 }
 
-/* --- FLOATING ANIMATION KEYFRAMES --- */
 @keyframes floatBackground {
   0% {
     transform: translate(0, 0) scale(1);
@@ -57,7 +53,6 @@ body::after {
   }
 }
 
-/* --- IMAGE CONTAINER --- */
 .container {
   display: flex;
   justify-content: center;
@@ -71,10 +66,9 @@ body::after {
   border-radius: 50%;
   box-shadow: 0 0 5px 5px rgb(50, 255, 120), inset 0 0 10px 5px rgba(3, 156, 131, 0.8);
   transition: all 0.5s ease-in-out;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-/* Section Styles */
 h2 {
   font-size: 36px;
   color: #ff9900;
@@ -82,14 +76,14 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* List Styles */
+
 ul {
   list-style-type: none;
   padding: 0;
   text-align: left;
   max-width: 700px;
   margin: 0 auto;
-  background-color: rgba(26, 26, 26, 0.7); /* translucent panel for depth */
+  background-color: rgba(26, 26, 26, 0.7); 
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
@@ -101,8 +95,6 @@ ul li {
   padding-left: 30px;
   position: relative;
 }
-
-/* Custom Check Marks */
 ul li::before {
   content: "✔️";
   position: absolute;
@@ -113,7 +105,6 @@ ul li::before {
   transform: translateY(4px);
 }
 
-/* Section Padding */
 .academic-excellence-section,
 .leadership-experience-section,
 .seminars-events-section,
@@ -123,7 +114,6 @@ ul li::before {
   margin-bottom: 50px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;

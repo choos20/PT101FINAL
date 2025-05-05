@@ -1,4 +1,3 @@
-/* Base styles */
 body {
   font-family: Arial, sans-serif;
   background-color: transparent;
@@ -9,7 +8,6 @@ body {
   position: relative;
 }
 
-/* --- LAYER 1: Deep Static Background --- */
 html::before {
   content: "";
   position: fixed;
@@ -21,7 +19,6 @@ html::before {
   z-index: -3;
 }
 
-/* --- LAYER 2: Animated Floating Background --- */
 body::before,
 body::after {
   content: "";
@@ -56,7 +53,6 @@ body::after {
   }
 }
 
-/* --- About Me Section --- */
 .about-me-section {
   text-align: center;
   margin-top: 50px;
@@ -78,6 +74,16 @@ body::after {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
 }
 
 .about-me-content p {
@@ -87,17 +93,70 @@ body::after {
   color: #ddd;
 }
 
-/* --- Responsive Design --- */
-@media screen and (max-width: 768px) {
-  .about-me-section h2 {
-    font-size: 28px;
-  }
+.image-container {
+  flex: 0 0 250px;
+  perspective: 1000px;
+  box-shadow: 0 0 5px 5px rgb(50, 255, 120), inset 0 0 10px 5px rgba(3, 156, 131, 0.8);
+}
 
-  .about-me-content p {
-    font-size: 16px;
-  }
+.image-container img {
+  width: 100%;
+  height: auto;
+  transform: rotateY(15deg); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
 
-  .about-me-content {
-    padding: 20px;
-  }
+.image-container img:hover {
+  transform: rotateY(0deg) scale(1.05);
+}
+/* Styling the reveal button */
+.reveal-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reveal-button:hover {
+  background-color: #00e699;
+  transform: translateY(-2px);
+}
+
+.reveal-button:active {
+  transform: translateY(2px);
+}
+
+/* Hidden message styling */
+#typeMessage {
+  color: #ff9900;
+  text-shadow: 0 0 10px #ff9900, 0 0 15px #ff9900;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Style for the image container */
+.image-container {
+  margin-top: 30px;
+  text-align: center; /* Center content within the image container */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+/* Optional: Adding hover effect for the image */
+.image-container img:hover {
+  transform: scale(1.05);
 }

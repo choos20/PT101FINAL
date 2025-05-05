@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="new3.css" />
+  <link rel="stylesheet" href="contact.css" />
   <title>Contact</title>
 </head>
 <body>
@@ -54,8 +54,6 @@
         <button type="submit">Submit</button>
       </form>
       
-
-      <!-- Thank You Message (Initially hidden) -->
       <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 20px;">
         <h3>Thank you for reaching out! Your message has been received.</h3>
       </div>
@@ -64,7 +62,7 @@
 
   <script>
     document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent form from submitting
+      e.preventDefault(); 
 
       const name = document.getElementById("name").value.trim();
       const lastname = document.getElementById("lastname").value.trim();
@@ -73,7 +71,6 @@
       const namePattern = /^[\p{L}\s'-]+$/u;
       const numberPattern = /^\+?[0-9]+$/;
 
-      // Validation checks
       if (!namePattern.test(name)) {
         alert("First name can only contain letters, spaces, hyphens, or apostrophes.");
       } else if (!namePattern.test(lastname)) {
@@ -81,9 +78,9 @@
       } else if (!numberPattern.test(number)) {
         alert("Phone number can only contain digits and an optional '+' at the beginning.");
       } else {
-        // Show the Thank You message and hide the form
+       
         document.getElementById("thankYouMessage").style.display = "block";
-        document.getElementById("contactForm").reset(); // Reset the form
+        document.getElementById("contactForm").reset(); 
       }
     });
   </script>

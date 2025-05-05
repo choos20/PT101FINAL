@@ -1,4 +1,3 @@
-/* --- GENERAL BODY STYLING --- */
 body {
   background: linear-gradient(-45deg, #1a1a1a, #41456c, #4a4e69, #02635a);
   background-size: 400% 400%;
@@ -8,17 +7,13 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 @keyframes gradientBackground {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-/* --- MAIN HEADING --- */
 h1 {
   font-family: 'Roboto', sans-serif;
-  /*font-family: 'Times New Roman', Times, serif;*/
   font-weight: 400;
   color: white;
   text-align: center;
@@ -26,8 +21,6 @@ h1 {
   text-shadow: 0 0 15px greenyellow;
   font-size: 70px;
 }
-
-/* --- SUB HEADING --- */
 h3 {
   text-align: center;
   text-shadow: 0 0 10px greenyellow;
@@ -35,34 +28,27 @@ h3 {
   font-size: 22px;
 }
 h1:hover, h3:hover {
-  color: rgb(50, 255, 120); /* Changes color on hover */
-  text-shadow: 0 0 20px greenyellow, 0 0 30px pink; /* More glowing */
-  transform: scale(1.05); /* Slightly grow the text */
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  color: rgb(50, 255, 120); 
+  text-shadow: 0 0 20px greenyellow, 0 0 30px pink; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
 }
-/* --- MAIN CONTAINER --- */
-/* --- CARD STYLE TO CREATE DOUBLE BACKGROUND EFFECT --- */
 .main-container {
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   padding: 50px 30px;
   box-shadow: 0 0 20px rgba(0, 255, 128, 0.5), 0 0 40px rgba(56, 248, 63, 0.3);
-  backdrop-filter: blur(10px); /* This adds a nice blur effect */
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
   max-width: 900px;
   margin: 100px auto;
 }
-
-
-/* --- IMAGE CONTAINER --- */
-/* --- IMAGE CONTAINER --- */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 .container img {
   height: 300px;
   width: 300px;
@@ -71,14 +57,10 @@ h1:hover, h3:hover {
   box-shadow: 0 0 5px 5px rgb(50, 255, 120), inset 0 0 10px 5px rgba(3, 156, 131, 0.8);
   transition: all 0.5s ease-in-out;
 }
-
-
 .container img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px 10px rgb(50, 255, 120), inset 0 0 20px 10px rgba(186, 253, 108, 0.8);
 }
-
-/* --- MENU STYLING --- */
 ul {
   list-style: none;
   display: flex;
@@ -93,17 +75,14 @@ ul {
   transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
   transform: translateY(-20px);
 }
-
 ul.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 ul li {
   margin-bottom: 20px;
 }
-
 ul li a {
   text-decoration: none;
   color: rgb(50, 255, 120);
@@ -114,7 +93,6 @@ ul li a {
   display: block;
   position: relative;
 }
-
 ul li a span {
   display: block;
   font-size: 14px;
@@ -122,19 +100,15 @@ ul li a span {
   color: white;
   text-shadow: 0 0 10px rgb(50, 255, 120);
 }
-
 ul li a:hover {
   color: rgb(227, 76, 175);
   transform: scale(1.1);
   animation: pulse 1s infinite alternate;
 }
-
 @keyframes pulse {
   from { transform: scale(1); }
   to { transform: scale(1.1); }
 }
-
-/* --- HAMBURGER MENU ICON --- */
 #menu-toggle {
   font-size: 30px;
   color: rgb(50, 255, 120);
@@ -149,8 +123,6 @@ ul li a:hover {
 #menu-toggle:hover {
   color: rgb(227, 76, 175);
 }
-
-/* --- RESPONSIVENESS --- */
 @media (max-width: 768px) {
   h1{
   font-size: 40px;
@@ -174,22 +146,21 @@ ul li a:hover {
     left: 10px;
   }
 }
-/* Scrollbar Customization */
+
 body::-webkit-scrollbar {
-  width: 30px; /* Width of the vertical scrollbar */
+  width: 30px; 
 }
 
 body::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Track color */
+  background: #f1f1f1; 
 }
 
-/* Custom Scrollbar Thumb with Gradient */
+
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #07709d, #38cbe5); /* Gradient from red to light blue */
-  border-radius: 100px; /* Rounded edges */
+  background: linear-gradient(45deg, #07709d, #38cbe5); 
+  border-radius: 100px; 
 }
 
-/* Scrollbar Thumb Hover Effect */
 body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #9c086d, #b0607d); /* Gradient from pink to blue on hover */
+  background: linear-gradient(45deg, #9c086d, #b0607d); 
 }
